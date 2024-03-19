@@ -8,7 +8,17 @@ jobs:
     name: Coa_job
     steps: []
     subgraphs: []
-locations: {}
+locations:
+  SRC:
+    mappingDefinitions:
+      "69":
+        database: FIVETRAN_SYNC_JJ
+        schema: FIVETRAN_TEST_SYNC_JJ
+  WORK:
+    mappingDefinitions:
+      "69":
+        database: JJ_QA
+        schema: JJ_QA_SCHEMA
 macros: {}
 packages: {}
 projects: {}
