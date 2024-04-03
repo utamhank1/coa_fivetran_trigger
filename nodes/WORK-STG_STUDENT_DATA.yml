@@ -138,7 +138,7 @@ steps:
               - locationName: SRC
                 nodeName: STUDENT_DATA
             join:
-              joinCondition: FROM {{ ref('SRC', 'STUDENT_DATA') }} "STUDENT_DATA"
+              joinCondition: FROM {{ ref('SRC', 'STUDENT_DATA') }} "STUDENT_DATA" limit {{ parameters.limit_ }}
             name: STG_STUDENT_DATA
             noLinkRefs: []
       name: STG_STUDENT_DATA
