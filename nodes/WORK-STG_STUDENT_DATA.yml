@@ -1,149 +1,159 @@
-steps:
-  STG_STUDENT_DATA-c47fc1a0-4cd8-4888-be10-dcb246c85537:
-    operation:
-      config:
-        insertStrategy: INSERT
-        postSQL: ""
-        preSQL: ""
-        testsEnabled: true
-        truncateBefore: true
-      database: ""
-      deployEnabled: true
-      description: ""
-      isMultisource: false
-      locationName: WORK
-      materializationType: table
-      metadata:
-        appliedNodeTests: []
-        columns:
-          - columnReference:
-              columnCounter: 41b2f996-fb61-4313-abdf-fede1f9702d9
-              stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
-            dataType: NUMBER(38,0)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: _ROW
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 92a5e256-b597-4469-a09c-a372f519b6fd
-                    stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
-                transform: ""
-          - columnReference:
-              columnCounter: 0888e32c-341b-41e1-842d-780cde8bb668
-              stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
-            dataType: TIMESTAMP_TZ(9)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: _FIVETRAN_SYNCED
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2ccbaab3-bb80-4342-be0e-c72bbe14af1f
-                    stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
-                transform: ""
-          - columnReference:
-              columnCounter: 9e57934a-8317-40ff-83dd-311f216b6e26
-              stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
-            dataType: VARCHAR(256)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: STUDENT_NAME
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 92f2e64c-d6d1-4817-93ec-5c6b503f121e
-                    stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
-                transform: ""
-          - columnReference:
-              columnCounter: b955ab3b-8c59-4ebd-b967-92eabd1d88f8
-              stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
-            dataType: VARCHAR(256)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: MAJOR
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 188cc3c2-2fa5-4291-8144-2f058e15884c
-                    stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
-                transform: ""
-          - columnReference:
-              columnCounter: 19f97646-60ee-47f9-a35b-a9b230e9d470
-              stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
-            dataType: VARCHAR(256)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: GENDER
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 7ed2b34c-80ae-43fe-aa3f-d941916fd928
-                    stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
-                transform: ""
-          - columnReference:
-              columnCounter: 75fae187-8f5e-4b98-acbb-f462571199ce
-              stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
-            dataType: VARCHAR(256)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: HOME_STATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 9ab3c5aa-8425-4dee-bc30-a802bc5999d7
-                    stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
-                transform: ""
-          - columnReference:
-              columnCounter: d28baafc-349f-46c3-9369-bec65166f748
-              stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
-            dataType: VARCHAR(256)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CLASS_LEVEL
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 8db55ad5-4742-483a-98c5-995af466cdf7
-                    stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
-                transform: ""
-          - columnReference:
-              columnCounter: 182ce867-f89c-4034-8ab3-bd9dd08cf736
-              stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
-            dataType: VARCHAR(256)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: EXTRACURRICULAR_ACTIVITY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 0cb0a3c2-33c7-4166-8d20-6288cd8edf02
-                    stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
-                transform: ""
-        cteString: ""
-        enabledColumnTestIDs: []
-        sourceMapping:
-          - aliases: {}
-            customSQL:
-              customSQL: ""
-            dependencies:
-              - locationName: SRC
-                nodeName: STUDENT_DATA
-            join:
-              joinCondition: FROM {{ ref('SRC', 'STUDENT_DATA') }} "STUDENT_DATA" limit {{ parameters.limit_ }}
-            name: STG_STUDENT_DATA
-            noLinkRefs: []
-      name: STG_STUDENT_DATA
-      overrideSQL: false
-      schema: ""
-      sqlType: Stage
-      type: sql
-    stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
+fileVersion: 1
+id: c47fc1a0-4cd8-4888-be10-dcb246c85537
+name: STG_STUDENT_DATA
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 41b2f996-fb61-4313-abdf-fede1f9702d9
+          stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        hashDetails: null
+        name: _ROW
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 92a5e256-b597-4469-a09c-a372f519b6fd
+                stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0888e32c-341b-41e1-842d-780cde8bb668
+          stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        hashDetails: null
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2ccbaab3-bb80-4342-be0e-c72bbe14af1f
+                stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e57934a-8317-40ff-83dd-311f216b6e26
+          stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        hashDetails: null
+        name: STUDENT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 92f2e64c-d6d1-4817-93ec-5c6b503f121e
+                stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b955ab3b-8c59-4ebd-b967-92eabd1d88f8
+          stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        hashDetails: null
+        name: MAJOR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 188cc3c2-2fa5-4291-8144-2f058e15884c
+                stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 19f97646-60ee-47f9-a35b-a9b230e9d470
+          stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        hashDetails: null
+        name: GENDER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ed2b34c-80ae-43fe-aa3f-d941916fd928
+                stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75fae187-8f5e-4b98-acbb-f462571199ce
+          stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        hashDetails: null
+        name: HOME_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ab3c5aa-8425-4dee-bc30-a802bc5999d7
+                stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d28baafc-349f-46c3-9369-bec65166f748
+          stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        hashDetails: null
+        name: CLASS_LEVEL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8db55ad5-4742-483a-98c5-995af466cdf7
+                stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 182ce867-f89c-4034-8ab3-bd9dd08cf736
+          stepCounter: c47fc1a0-4cd8-4888-be10-dcb246c85537
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        hashDetails: null
+        name: EXTRACURRICULAR_ACTIVITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0cb0a3c2-33c7-4166-8d20-6288cd8edf02
+                stepCounter: 3f3f9cab-341e-42f8-b1bc-f3ab1d39a0ff
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: STUDENT_DATA
+        join:
+          joinCondition: FROM {{ ref('SRC', 'STUDENT_DATA') }} "STUDENT_DATA" limit {{ parameters.limit_ }}
+        name: STG_STUDENT_DATA
+        noLinkRefs: []
+  name: STG_STUDENT_DATA
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

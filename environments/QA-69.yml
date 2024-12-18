@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "69"
+mappingDefinitions:
+  SRC:
+    database: FIVETRAN_SYNC_JJ
+    schema: FIVETRAN_TEST_SYNC_JJ
+  WORK:
+    database: JJ_QA
+    schema: JJ_QA_SCHEMA
+name: QA
+type: Environment
