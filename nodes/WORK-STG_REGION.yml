@@ -1,0 +1,109 @@
+fileVersion: 1
+id: e67bb4a5-43ff-4917-9030-ffc1341e169b
+name: STG_REGION
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4816784b-8b71-4e13-a183-23ba3913fea2
+          stepCounter: e67bb4a5-43ff-4917-9030-ffc1341e169b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: _ROW
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4151466e-55a1-4d1f-b62c-9f84f4fb7fa8
+                stepCounter: 6c5418a9-8881-4337-9650-cc1a4c55fb80
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83d9e4f2-253b-441c-a237-0cb74a468d13
+          stepCounter: e67bb4a5-43ff-4917-9030-ffc1341e169b
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cb17e6bf-3bb9-4ebc-8218-e24a1fc7e5d0
+                stepCounter: 6c5418a9-8881-4337-9650-cc1a4c55fb80
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd98cbbb-d676-48fc-aca4-ba1ad772ef7e
+          stepCounter: e67bb4a5-43ff-4917-9030-ffc1341e169b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: R_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4234f40a-0ea6-47dc-84dc-5a4532a84058
+                stepCounter: 6c5418a9-8881-4337-9650-cc1a4c55fb80
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 821cafac-da64-46b3-9e80-04d0586608a8
+          stepCounter: e67bb4a5-43ff-4917-9030-ffc1341e169b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: R_REGIONKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dc0aaebb-a7b0-4b00-9c39-0573cb38701e
+                stepCounter: 6c5418a9-8881-4337-9650-cc1a4c55fb80
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d5a61de6-b612-48a7-981c-612b84eabf2b
+          stepCounter: e67bb4a5-43ff-4917-9030-ffc1341e169b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: R_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 948f1232-52ec-4f7d-82ee-e419b9984cbd
+                stepCounter: 6c5418a9-8881-4337-9650-cc1a4c55fb80
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC_FIVETRAN
+            nodeName: REGION
+        join:
+          joinCondition: FROM {{ ref('SRC_FIVETRAN', 'REGION') }} "REGION"
+        name: STG_REGION
+        noLinkRefs: []
+  name: STG_REGION
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
