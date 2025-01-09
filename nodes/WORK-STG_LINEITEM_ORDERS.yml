@@ -1,6 +1,6 @@
 fileVersion: 1
 id: e7502046-9817-49d7-9dd9-8f4bafb69b16
-name: STG_ORDERS_LINEITEM
+name: STG_LINEITEM_ORDERS
 operation:
   config:
     insertStrategy: INSERT
@@ -421,9 +421,9 @@ operation:
             INNER JOIN {{ ref('WORK', 'STG_ORDERS') }} "STG_ORDERS"
 
             ON "STG_LINEITEM"."L_ORDERKEY" = "STG_ORDERS"."O_ORDERKEY"
-        name: STG_ORDERS_LINEITEM
+        name: STG_LINEITEM_ORDERS
         noLinkRefs: []
-  name: STG_ORDERS_LINEITEM
+  name: STG_LINEITEM_ORDERS
   overrideSQL: false
   schema: ""
   sqlType: Stage
